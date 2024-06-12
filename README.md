@@ -16,7 +16,10 @@ NumPy
 Pathlib
 
 
-Clone the repository to your local machine.
-Ensure you have the required libraries installed.
-Open crypto_investments.ipynb in Jupyter Notebook or Jupyter Lab.
-Run the cells to see the analysis and visualizations.
+1.Clone the repository to your local machine.
+
+2.Ensure you have the required libraries installed.
+
+3.Open crypto_investments.ipynb in Jupyter Notebook or Jupyter Lab.
+
+4.Run the cells to see the analysis and visualizations.
