@@ -1,4 +1,4 @@
-title>Crypto Portfolio Clustering Project<
+Crypto Portfolio Clustering Project<
 
 This project demonstrates the use of financial programming and unsupervised learning techniques to enhance cryptocurrency investment portfolio assembly. By leveraging clustering and PCA, the approach aims to provide more robust and insightful portfolio recommendations, potentially leading to better market performance.
 
@@ -11,3 +11,9 @@ hvPlot
 Matplotlib
 NumPy
 Pathlib
+
+
+Clone the repository to your local machine.
+Ensure you have the required libraries installed.
+Open crypto_investments.ipynb in Jupyter Notebook or Jupyter Lab.
+Run the cells to see the analysis and visualizations.
