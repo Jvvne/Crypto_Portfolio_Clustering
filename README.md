@@ -2,47 +2,51 @@ Crypto Portfolio Clustering Project
 ![image](https://github.com/Jvvne/Crypto_Portfolio_Clustering/assets/148028363/c7c64514-e06a-427b-9052-2bcd3f829064)
 
 Project Goal:
-This project aims to group cryptocurrencies into clusters based on their price changes in different timeframes (24 hours and 7 days) using an unsupervised machine learning technique called K-Means Clustering.
-Data:
+# Project Title: Cryptocurrency Clustering Using K-Means
 
-The project utilizes a CSV file named "crypto_market_data.csv" containing price change data for various cryptocurrencies.
-Process:
+## Project Objective:
+The primary objective of this project is to categorize cryptocurrencies into distinct clusters based on their price fluctuations over different timeframes (24 hours and 7 days) by leveraging the K-Means Clustering algorithm, a popular unsupervised machine learning technique.
 
-#Import and Analyze Data:
-First step is to import the CSV data into a pandas DataFrame.
-After importing the data, it's time to do some exploratory data analysis using summary statistics and visualizations with HvPlot to understand its characteristics.
-2##Data Preprocessing:
-The data is then normalized using scikit-learn's StandardScaler to ensure features are on a similar scale before applying K-means clustering.
+## Data Overview:
+The dataset used for this project is a CSV file titled `crypto_market_data.csv`, which includes information on the price changes of various cryptocurrencies.
 
-3##Finding the Optimal Number of Clusters (k):
-To start the process of using this technique, we start with a method known as the "elbow method" which determines the ideal number of clusters (k) for K-means.
-The elbow method involves calculating the inertia (a measure of how spread out the data points are within a cluster) for different values of k and plotting them. The optimal k is usually chosen when the line in the chart starts to plateau or bend (the "elbow" of the curve).
-elbow chart
-![image](https://github.com/user-attachments/assets/e3c4594f-2ff6-4dec-a635-9c902ec92698)
+## Project Workflow:
 
+### 1. Data Import and Initial Analysis:
+The first task is to load the CSV data into a pandas DataFrame. Following this, we conduct exploratory data analysis (EDA) by summarizing the statistics and employing visualizations with `HvPlot` to gain insights into the data's structure and behavior.
 
-4##Clustering with K-means (Original Data):
-Once the optimal k is found, the script uses K-means clustering to group the cryptocurrencies into k clusters based on their price changes.
+### 2. Data Preprocessing:
+To prepare the data for clustering, we standardize the features using scikit-learn's `StandardScaler`. This step is essential to ensure that all features are on a comparable scale before applying the K-Means algorithm.
 
-The script will then create a scatter plot visualizing the clusters using price changes over different timeframes.
+### 3. Determining the Optimal Number of Clusters:
+To identify the best number of clusters (`k`), we utilize the "elbow method." This technique involves plotting the inertia (a metric that indicates how compact the clusters are) against various values of `k`. The optimal number of clusters is typically selected where the plot exhibits a noticeable "elbow," indicating a point where increasing `k` no longer significantly reduces inertia.
 
-The data points are colored coded according to their assigned cluster so you know which point reveals the corresponding cryptocurrency name.
+#### Elbow Chart:
+- The elbow chart helps visualize the change in inertia across different `k` values, guiding us to select the most appropriate `k`.
 
-cluster_chart
+### 4. Clustering Cryptocurrencies Using K-Means:
+Once the optimal `k` value is determined, we apply the K-Means algorithm to cluster the cryptocurrencies based on their price changes. The resulting clusters are then visualized in a scatter plot, with each data point representing a cryptocurrency, color-coded according to its assigned cluster.
 
-5##Optimizing Clusters with Principal Component Analysis (PCA):
-After fitting the model and testing, We use PCA to improve the clustering by removing the most irrelevant features/columns within the scatter plot.
-PCA also helps find the features/columns with the most variance which can be significant when looking at the crypto names.
-Once PCA is established, we will have a good understanding of what features impact the price change the most within the crypto names.
+#### Cluster Visualization:
+- The scatter plot showcases the distribution of cryptocurrencies across clusters, making it easier to interpret the clustering results.
 
-6##Using PCA data with clustering:
-In this step I used the PCA data with the K-means clustering technique with the chosen k(4) to group the cryptocurrencies based on the principal components.
-Comparing Results with and without PCA:
-To compare the clustering effectiveness, I created visualizations contrasting the results with and without PCA:
+### 5. Enhancing Clustering with Principal Component Analysis (PCA):
+After initial clustering, we employ Principal Component Analysis (PCA) to refine the clusters. PCA reduces the dataset's dimensionality by focusing on the features with the highest variance, which are most relevant for clustering. This step helps to remove less significant features, enhancing the clarity and effectiveness of the clustering.
 
-One visualization compared the elbow curves used to determine the optimal k in both scenarios (original data vs. PCA data).
-Another visualization compared the scatter plots of the final clusters using the original data and the PCA data.
-both_clusters
+### 6. Applying K-Means to PCA-Transformed Data:
+With the dataset transformed by PCA, we rerun the K-Means clustering algorithm using the previously determined optimal `k` value. This allows us to observe how the clustering results differ when only the most significant features are considered.
+
+### 7. Comparing Results - With and Without PCA:
+To assess the impact of PCA on clustering, we generate visual comparisons between the results obtained from the original data and the PCA-transformed data:
+
+- **Elbow Curves Comparison:** Visualizing the elbow curves for both the original and PCA-transformed data to see how PCA affects the determination of the optimal `k`.
+- **Cluster Scatter Plots Comparison:** Creating scatter plots for the clusters derived from the original data and the PCA-transformed data to observe differences in cluster distribution and clarity.
+
+#### Impact Analysis:
+- By analyzing the visual comparisons, it becomes evident that clustering with fewer features (after PCA) often leads to more distinct and interpretable clusters, as the reduction in features helps highlight the most critical variations in the data.
+
+This approach ensures that the clustering process is both effective and insightful, providing a deeper understanding of the factors driving cryptocurrency price changes.
+
 
 Impact of Using Fewer Features:
 By visually analyzing the comparisons, you will observed that using fewer features (principal components) result in clusters more spread out and easier to interpret due to the reduced number of columns used.
