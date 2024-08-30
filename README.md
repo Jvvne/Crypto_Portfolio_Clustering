@@ -20,12 +20,14 @@ To prepare the data for clustering, we standardize the features using scikit-lea
 
 ### 3. Determining the Optimal Number of Clusters:
 To identify the best number of clusters (`k`), we utilize the "elbow method." This technique involves plotting the inertia (a metric that indicates how compact the clusters are) against various values of `k`. The optimal number of clusters is typically selected where the plot exhibits a noticeable "elbow," indicating a point where increasing `k` no longer significantly reduces inertia.
+![image](https://github.com/user-attachments/assets/364f32e0-62dd-44f5-880c-94a598ed2e1d)
 
 #### Elbow Chart:
 - The elbow chart helps visualize the change in inertia across different `k` values, guiding us to select the most appropriate `k`.
 
 ### 4. Clustering Cryptocurrencies Using K-Means:
 Once the optimal `k` value is determined, we apply the K-Means algorithm to cluster the cryptocurrencies based on their price changes. The resulting clusters are then visualized in a scatter plot, with each data point representing a cryptocurrency, color-coded according to its assigned cluster.
+![image](https://github.com/user-attachments/assets/45e821f3-348f-4430-b25d-158baf0ed8f4)
 
 #### Cluster Visualization:
 - The scatter plot showcases the distribution of cryptocurrencies across clusters, making it easier to interpret the clustering results.
@@ -38,6 +40,7 @@ With the dataset transformed by PCA, we rerun the K-Means clustering algorithm u
 
 ### 7. Comparing Results - With and Without PCA:
 To assess the impact of PCA on clustering, we generate visual comparisons between the results obtained from the original data and the PCA-transformed data:
+![image](https://github.com/user-attachments/assets/5dd3897c-a898-4ed3-9797-b81f104aa675)
 
 - **Elbow Curves Comparison:** Visualizing the elbow curves for both the original and PCA-transformed data to see how PCA affects the determination of the optimal `k`.
 - **Cluster Scatter Plots Comparison:** Creating scatter plots for the clusters derived from the original data and the PCA-transformed data to observe differences in cluster distribution and clarity.
@@ -50,16 +53,6 @@ This approach ensures that the clustering process is both effective and insightf
 
 Impact of Using Fewer Features:
 By visually analyzing the comparisons, you will observed that using fewer features (principal components) result in clusters more spread out and easier to interpret due to the reduced number of columns used.
-
-Languages and Frameworks Used
-Languages: Python
-Libraries and Frameworks:
-Pandas
-scikit-learn
-hvPlot
-Matplotlib
-NumPy
-Pathlib
 
 
 1.Clone the repository to your local machine.
