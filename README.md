@@ -51,10 +51,6 @@ To assess the impact of PCA on clustering, we generate visual comparisons betwee
 This approach ensures that the clustering process is both effective and insightful, providing a deeper understanding of the factors driving cryptocurrency price changes.
 
 
-Impact of Using Fewer Features:
-By visually analyzing the comparisons, you will observed that using fewer features (principal components) result in clusters more spread out and easier to interpret due to the reduced number of columns used.
-
-
 1.Clone the repository to your local machine.
 
 2.Ensure you have the required libraries installed.
