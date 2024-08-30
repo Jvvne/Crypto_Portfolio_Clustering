@@ -8,7 +8,7 @@ Data:
 The project utilizes a CSV file named "crypto_market_data.csv" containing price change data for various cryptocurrencies.
 Process:
 
-1##Import and Analyze Data:
+1#Import and Analyze Data:
 First step is to import the CSV data into a pandas DataFrame.
 After importing the data, it's time to do some exploratory data analysis using summary statistics and visualizations with HvPlot to understand its characteristics.
 2##Data Preprocessing:
